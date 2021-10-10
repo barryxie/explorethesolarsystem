@@ -1,0 +1,21 @@
+#startwrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, .95);
+	width: 100%;
+	display: flexbox;
+	text-align: center;
+}
+
+.hidestartwrapper {
+	display: none;
+}
+
+#game div {
+	border: 1px solid black;
+	width: 15%;
+	height: 200px;
+	margin: 10px;
+	display: inline-block;
+}
