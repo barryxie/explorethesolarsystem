@@ -163,6 +163,19 @@ body {
 	font-size: 3rem;
 }
 
+#imgeby{
+  font-size: 1rem;
+  margin-top: 50px;
+  float:right;
+  padding: 30px
+}
+
+#imgeby a{
+  color white;
+  text-decoration: none;
+
+}
+
 @media (max-width: 992px) {
 	.game-card-wrapper {
 		width: 100%;

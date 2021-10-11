@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function endGame() {
     let end = document.querySelector("#end");
     let scoreHeader = end.children[1];
-    scoreHeader.innerText = `Your score: ${currentScore}`;
+    scoreHeader.innerText = "Your score: " + currentScore;
     let lowScore = +localStorage.getItem("low-score") || Infinity;
     if (currentScore < lowScore) {
       scoreHeader.innerText += " - NEW BEST SCORE!!";
