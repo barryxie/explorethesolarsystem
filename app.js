@@ -6,18 +6,18 @@ document.addEventListener("DOMContentLoaded", function() {
   let cardsFlipped = 0;
   let currentScore = 0;
   let lowScore = localStorage.getItem("low-score");
-  let start = document.getElementById("start");
+  let start = document.querySelector("#start");
 
 
   if (lowScore) {
-    document.getElementById("best-score").innerText = lowScore;
+    document.querySelector("#best-score").innerText = lowScore;
   }
 
   for (let card of cards) {
     card.addEventListener("click", handleCardClick);
   }
 
-  let startBtn = document.getElementById("start-button");
+  let startBtn = document.querySelector("#start-button");
   startBtn.addEventListener("click", startGame);
 
   function handleCardClick(e) {
@@ -95,18 +95,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function setScore(newScore) {
     currentScore = newScore;
-    document.getElementById("current-score").innerText = currentScore;
+    document.querySelector("#current-score").innerText = currentScore;
   }
 
   function endGame() {
-    let end = document.getElementById("end");
+    let end = document.querySelector("#end");
     let scoreHeader = end.children[1];
-    scoreHeader.innerText = "Your score: " + currentScore;
+    scoreHeader.innerText = `Your score: ${currentScore}`;
     let lowScore = +localStorage.getItem("low-score") || Infinity;
     if (currentScore < lowScore) {
       scoreHeader.innerText += " - NEW BEST SCORE!!";
       localStorage.setItem("low-score", currentScore);
     }
-    document.getElementById("end").classList.add("game-over");
+    document.querySelector("#end").classList.add("game-over");
   }
 });
