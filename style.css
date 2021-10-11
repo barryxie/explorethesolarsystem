@@ -16,12 +16,23 @@ body {
 #start {
 	height: 90vh;
 	font-family: 'Bungee', cursive;
-	color: #ce29f7;
+	color: #01243a;
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url("image/start.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #title {
-	font-size: 8rem;
+	font-size: 6rem;
+	perspective: 1200px;
+	transition: all .3s ease-in-out;
+}
+
+#title:hover {
 	perspective: 600px;
 }
 
@@ -29,11 +40,11 @@ body {
 	transform: rotateX(45deg);
 	line-height: 0.75;
 	text-align: center;
-	color: #610079;
+	color: white;
 }
 
 #start.playing {
-	margin-top: -90vh;
+	display: none;
 	transition: margin-top 1s;
 }
 
@@ -90,6 +101,7 @@ body {
 }
 
 .front {
+	background-image: url("image/rocket.svg");
 }
 
 .back {
@@ -102,11 +114,25 @@ body {
 	width: auto;
 }
 
+#current-score-display {
+	display: flex;
+	align-items: center;
+}
+
+#blue-rocket {
+	text-align: right;
+}
+
+#blue-rocket img {
+	height: 60px;
+}
+
 #current-score {
 	display: flex;
 	font-size: 4rem;
 	font-family: 'Bungee', cursive;
-	color: #ce29f7;
+	color: white;
+	text-align: right;
 }
 
 #end {

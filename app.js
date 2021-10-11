@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let lowScore = localStorage.getItem("low-score");
   let start = document.getElementById("start");
 
+
   if (lowScore) {
     document.getElementById("best-score").innerText = lowScore;
   }
@@ -68,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let i = 0; i < cards.length; i++) {
       let path = "svg/" + pairs[i] + ".svg";
       cards[i].children[1].children[0].src = path;
+      
       
     }
   }
